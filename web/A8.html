@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webpage 5 fields</title>
+    <link rel="stylesheet" type="text/css" href="A8style.css" >
+
+<script>
+        var flag=0;
+        function username()
+        {
+        user=loginform.username.value;
+        if(user=="")
+        {
+        document.getElementById("error0").innerHTML="Enter UserID";
+    flag=1;
+    }
+    }
+    function password()
+    {
+    pass=loginform.password.value;
+    if(pass=="")
+    {
+    document.getElementById("error1").innerHTML="Enter password";
+    flag=1;
+    }
+    }
+
+    function check(form)
+    {
+    flag=0;
+    username();
+    password();
+    if(flag==1)
+    return false;
+    else
+    return true;
+    }
+ </script>
+
+</head>
+<body align="center">
+
+<form name="mform" onsubmit="check(mform);">
+
+    <table border="double" align="center">
+    <tr><td><label>username</label></td>
+   <td><input type="text" name="input1" id="1" align="right"></td></tr>
+        <tr><td><label>password</label></td>
+            <td><input type="password" name="input2"id="2"></td></tr>
+        <tr><td><label>confirm password</label></td>
+            <td><input type="password" name="input3"id="3" align="left"></td></tr>
+        <tr>  <td><label>mobile</label></td>
+            <td>  <input type="number" name="input4"id="4"></td></tr>
+        <tr><td><label>email</label></td>
+            <td><input type="email" name="input5"id="5"></td></tr>
+
+    <tr align="center"><td>
+    <input type="submit" name="submit" ></td></tr>
+    </table>
+
+</form>
+
+</body>
+</html>

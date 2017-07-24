@@ -1,0 +1,17 @@
+body {
+    align-content: center;
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+input{
+foreground-color: green;
+text-decoration-color: black;
+    align:right;
+}
+form{
+    align-items:center;
+}

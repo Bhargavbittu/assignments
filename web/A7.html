@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select color</title>
+    <script type="text/javascript">
+       /* function readCookie() {
+            var namevalueArray = document.cookie.split(";");
+
+
+            for (var i = 0; i < namevalueArray.length; i++) {
+                var smallvalueArray = namevalueArray[i].trim().split("=");
+                if (smallvalueArray[0]=="col") {
+
+                 //   document.cookie = "firstname" + decodeURIComponent(firstname);
+                    document.body.style.backgroundColor=(smallvalueArray[1].substring(1,smallvalueArray[1].length)).trim();
+                }
+            }
+        }*/
+
+      /* function readCookie() {
+           var nameEQ = color + "=";
+           var ca = document.cookie.split(';');
+           for(var i=0;i < ca.length;i++) {
+               var c = ca[i];
+               while (c.charAt(0)==' ') c = c.substring(1,c.length);
+               if (c.indexOf(nameEQ) == 0) document.body.style.backgroundColor= c.substring(nameEQ.length,c.length);
+           }
+           return document.body.style.backgroundColor="white";
+       }*/
+window.onload=function () {
+    if(document.cookie.length!=0)
+    {
+        var a1=document.cookie.split("=");
+        document.bgcolor=a1[1];
+
+    }
+}
+    </script>
+
+</head>
+<body onload="readCookie()">
+<form action="A7Servlet" method="get" >
+
+    <input type="color" name="col">
+    <input type="submit" name="submit">
+</form>
+
+</body>
+</html>
